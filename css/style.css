@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 43vh;
+    height: 67vh;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    border: solid black 2px;
+}
+
+.digitBtn {
+    width: 10vh;
+    height: 10vh;
+    margin: 1px;
+    text-align: center;
+    border: solid black 0.5px;
+    border-radius: 10%;
+}
+
+.operatorBtn {
+    background-color: rgb(204, 95, 149);
+}
+
+.operatorBtn:hover {
+    background-color: rgb(182, 50, 116);
+}
+
+.numberBtn {
+    font-weight: bold;
+    background-color: lightblue;
+}
+
+.numberBtn:hover {
+    background-color: hsl(195, 53%, 75%);
+}
+
+.topRow {
+    background-color: hsl(195, 53%, 65%);
+}
+
+.topRow:hover {
+    background-color: hsl(195, 53%, 50%);
+}
+
+#display {
+    width: 40vh;
+    height: 10vh;
+    font-size: 2em;
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 2vh 2vh 0vh 0vh;
+    /*border: solid hotpink 1px;*/
+}
+
+#zero {
+    width: 20.2vh;
+    border: solid black 0.5px;
+}
