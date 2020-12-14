@@ -1,19 +1,62 @@
-body {
-    display: flex;
-    justify-content: center;
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-    width: 43vh;
-    height: 67vh;
-    margin-top: 10%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: black;
-    border: solid black 2px;
+body{
+    padding: 0;
+    margin: 0;
+    background: rgb(239, 239, 240);
 }
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 10vh);
+    grid-template-rows: minmax(12vh, auto) repeat(5, 10vh);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 1.5em;
+    text-align: center;
+    margin: -1px;
+    border: 1px solid black;
+    /*border: 1px solid white;*/
+    color: white;
+    outline: none;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    margin: -1px;
+    background-color:rgba(0, 0, 0, 85%);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3%;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255.75);
+    font-size: 1rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2rem;
+}
+
 
 .digitBtn {
     width: 10vh;
@@ -24,12 +67,20 @@ body {
     border-radius: 10%;
 }
 
+.top-row {
+    background-color: hsl(195, 53%, 65%);
+}
+
+.top-row:hover {
+    background-color: hsl(195, 53%, 50%);
+}
+
 .operatorBtn {
-    background-color: rgb(204, 95, 149);
+    background-color: hsl(0, 72%, 66%);
 }
 
 .operatorBtn:hover {
-    background-color: rgb(182, 50, 116);
+    background-color: hsl(0, 72%, 55%);
 }
 
 .numberBtn {
@@ -41,26 +92,26 @@ body {
     background-color: hsl(195, 53%, 75%);
 }
 
-.topRow {
-    background-color: hsl(195, 53%, 65%);
+.equal {
+    background-color: hsl(0, 72%, 44%);
 }
 
-.topRow:hover {
-    background-color: hsl(195, 53%, 50%);
+.equal:hover {
+    background-color: hsl(0, 98%, 32%);
 }
 
-#display {
-    width: 40vh;
-    height: 10vh;
-    font-size: 2em;
-    background-color: black;
-    color: white;
-    text-align: right;
-    padding: 2vh 2vh 0vh 0vh;
-    /*border: solid hotpink 1px;*/
+@media screen and (max-width: 375) {
+    .calculator-grid{
+      min-height: 100vh;
+      min-width: 100vh;  
+    }
 }
 
-#zero {
-    width: 20.2vh;
-    border: solid black 0.5px;
+@media screen and (max-height: 667) {
+    .calculator-grid{
+        min-height: 100vh;
+        min-width: 100vh;  
+    }
 }
+
+

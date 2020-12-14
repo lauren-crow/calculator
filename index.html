@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <div id="display"></div>
-    <div class="digitBtn topRow" id="clear"><p>AC</p></div>
-    <div class="digitBtn topRow" id="posNeg"><p>+/-</p></div>
-    <div class="digitBtn topRow" id="modulus"><p>%</p></div>
-    <div class="digitBtn operatorBtn" id="dividedBy"><p>/</p></div>
-    <div class="digitBtn numberBtn" id="seven"><p>7</p></div>
-    <div class="digitBtn numberBtn" id="eight"><p>8</p></div>
-    <div class="digitBtn numberBtn" id="nine"><p>9</p></div>
-    <div class="digitBtn operatorBtn" id="times"><p>*</p></div>  
-    <div class="digitBtn numberBtn" id="four"><p>4</p></div>
-    <div class="digitBtn numberBtn" id="five"><p>5</p></div>
-    <div class="digitBtn numberBtn" id="six"><p>6</p></div>
-    <div class="digitBtn operatorBtn" id="minus"><p>-</p></div>   
-    <div class="digitBtn numberBtn" id="one"><p>1</p></div>
-    <div class="digitBtn numberBtn" id="two"><p>2</p></div>
-    <div class="digitBtn numberBtn" id="three"><p>3</p></div>
-    <div class="digitBtn operatorBtn" id="plus"><p>+</p></div>   
-    <div class="digitBtn numberBtn" id="zero"><p>0</p></div>
-    <div class="digitBtn numberBtn" id="point"><p>.</p></div>
-    <div class="digitBtn operatorBtn" id="equals"><p>=</p></div>
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="previous-operand">123</div>
+            <div data-current-operand class="current-operand">4566</div>
+        </div>
+        <button data-ac class="span-two top-row">AC</button>
+        <button data-delete class="top-row">DEL</button>
+        <button data-operation class="operatorBtn">/</button>
+        <button data-number class="numberBtn">7</button>
+        <button data-number class="numberBtn">8</button>
+        <button data-number class="numberBtn">9</button>
+        <button data-operation class="operatorBtn">*</button>
+        <button data-number class="numberBtn">4</button>
+        <button data-number class="numberBtn">5</button>
+        <button data-number class="numberBtn">6</button>
+        <button data-operation class="operatorBtn">-</button>
+        <button data-number class="numberBtn">1</button>
+        <button data-number class="numberBtn">2</button>
+        <button data-number class="numberBtn">3</button>
+        <button data-operation class="operatorBtn">+</button>
+        <button data-number class="span-two numberBtn">0</button>
+        <button data-number class="numberBtn">.</button>
+        <button data-equals class="equal operatorBtn">=</button>
 </div>
-
-
-    <script src='js/main.js'></script>
 </body>
 </html>
